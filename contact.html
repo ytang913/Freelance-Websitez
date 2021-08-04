@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="nav-link-wrapper active-nav-link">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          Yiming (Danny) Tang
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="two-column-wrapper">
+        <div class="profile-image-wrapper">
+          <img src="images/55816583_2601972136496984_7088943014965411840_o.jpg" alt=""> 
+        </div>
+
+        <div class="profile-content-wrapper-a">
+          <h1>Contact</h1>
+          <p>
+            Below enter in your contact information for the website/web application you want me to build.
+          </p>
+          <h3 style="text-align: center;">Enter In Your Contact Information</h3>
+        
+                    <form action = "https://formspree.io/f/mrgrerwy" method = "POST">
+                        <div class= "contact-form">
+                            <a name="contact"></a>
+            
+                            <label>Name</label>
+                            <input class="input-field" type="text" name="name">
+            
+                            <label>Subject</label>
+                            <input class="input-field" type="text" name="subject">
+            
+                            <label>Email</label>
+                            <input class="input-field" type="text" name="email">
+            
+                            <label>Message</label>
+                            <textarea class="input-field" name="message"></textarea>
+            
+                            <input id="submit-btn" type="submit" value="Send"> 
+
+                            <input id = "reset-btn" type="reset" value="Reset"> 
+
+                           
+                        </div>
+                    </form>
+                    <h3 style="text-align: center;">Press the reset button to clear the data</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

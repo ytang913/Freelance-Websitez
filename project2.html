@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>PGCAgencyFinder</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper">
+          <a href="index.html">Home</a>
+        </div>
+
+        <div class="nav-link-wrapper active">
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          Yiming (Danny) Tang
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="two-column-wrapper">
+        <div class="profile-image-wrapper-2">
+          <img src="images/PGCAgencyFinder.jpg"> 
+        </div>
+
+        <div class="profile-content-wrapper">
+          <h1>PGCAgencyFinder</h1>
+
+          <h2>About</h2>
+          <p>
+              Many students and faculty coming to the University of Maryland, College Park
+              are unfamilar with PG County. On top of the many stresses of being 
+              in an academic environment, finding the nearest PG County Agency to 
+              solve their problems can be a daunting task. 
+          </p>                    
+          <p>
+              To solve this problem I created the PGC Agency Finder which 
+              is essentially a full stack web application that is used 
+              to look up PG County Government Agencies. 
+          </p>
+          <p>
+              The application works by entering the agency of interest, which
+              results in a list being populated with the desired agencies.</p> 
+              
+          <p>The list itself will display the name of the office,its address,
+              and its agency. </p>
+
+          <p>There is also a map function, which will display 
+              the location of each populated agency with the accompanying information 
+              in a pop-up banner. </p>
+
+          <p>Furthermore, the "Get All Offices" button can be used 
+              to get all agencies on the map and in the list.</p>
+
+          <p>Possble agencies users 
+              can enter are HEALTH, DPWT, COURTS, OCS, SOIL CONSERVATION, 
+              FIRE, PSC, DER, POLICE, SHERIFF, COUNTY EXECUTIVE, OHRM, and OIT.</p>
+          </p>
+
+          <h2>Documentation</h2>
+          <p>
+              This web application was done using 
+              HTML, CSS, JavaScript, APIs, JSON file, Leaflet, Express, and Node.Js.
+          </p>    
+          
+          <p>
+              I used HTML and CSS for the overall design of the frontend portion of the web application. 
+              JavaScript for the user interactions with the web application.
+          </p>
+
+          <p>
+              Leaflet was used for the map creation based on the Open Street Map API.
+          </p>
+          <p>
+              Express/Node.Js was used for the backend part of the website, 
+              essentially storing the data from the PG County API.
+          </p>
+          
+          <p>
+              All end points are expecting a JSON object/form object with the key agency and an agency bound to that key. 
+              Only end point that does not rely on the input is the GET route.
+          </p>
+
+          <p>
+              Example of JSON object: { agency: 'FIRE' } will cause endpoints to read the agency as FIRE. 
+          </p>
+
+          <p>The key must be 'agency' as the Value is not case sensitive.
+              Any case variation will still be read as FIRE.</p>
+          <p>
+              GET is used to get all offices and return that to the list and map. 
+              It returns all offices in a JSON object unfiltered.
+          </p>
+          <p>
+              PUT is used to populate the list of offices with offices of interest based on agency. 
+              It returns a filtered JSON object with office: description, address, city, agency.
+          </p>
+          
+          <p>
+              POST is used to get all offices of interest and return information needed to generate map points. Returns a filtered JSON object with office: description, address, city, agency, longitude, latitude. 
+              It includes longitude and lattidude in which PUT does not.
+          </p>
+
+          <p>
+              The data of the different agencies came from the  
+              <a href = "https://data.princegeorgescountymd.gov/">PG County API</a>
+          </p>
+
+          <p>The web application was deployed on 
+               <a href ="https://pgcagencyfinder.azurewebsites.net/">Microsoft Azure Cloud</a>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
